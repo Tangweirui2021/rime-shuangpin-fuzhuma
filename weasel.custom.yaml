@@ -1,0 +1,140 @@
+customization:
+  distribution_code_name: Weasel
+  distribution_version: 0.17.4
+  generator: "Weasel::UIStyleSettings"
+  modified_time: "Mon Aug 24 11:40:47 2026"
+  rime_version: 1.13.1
+patch:
+  show_notifications: false
+  "style/color_scheme": luxury_dark
+  "style/color_scheme_dark": luxury_dark
+  "style/mark_text": "│"
+  style/+:
+    # ===== 字体 =====
+    font_face: "Source Han Sans SC, Plangothic P1, Plangothic P2, Segoe UI Emoji"
+    label_font_face: "Segoe UI, Source Han Sans SC"
+    comment_font_face: "Source Han Sans SC, Plangothic P1, Plangothic P2"
+
+    font_point: 11.5
+    label_font_point: 10
+    comment_font_point: 10
+
+    # ===== 排版 =====
+    horizontal: false
+    inline_preedit: true
+    preedit_type: composition
+
+    color_scheme: luxury_dark
+
+    layout:
+      min_width: 80
+      min_height: 0
+      max_width: 0
+
+      border_width: 1
+
+      # 外层内容留白
+      margin_x: 6
+      margin_y: 4
+
+      # 输入编码与候选区间距
+      spacing: 4
+
+      # 各候选之间
+      candidate_spacing: 3
+
+      # 高亮候选与周围区域
+      hilite_spacing: 0
+
+      # 高亮候选内部
+      hilite_padding_x: 6
+      hilite_padding_y: 4
+
+      # 高亮块圆角
+      round_corner: 6
+
+      # 整体窗口圆角
+      corner_radius: 9
+
+      # 外部阴影
+      shadow_radius: 10
+      shadow_offset_x: 0
+      shadow_offset_y: 3
+
+  preset_color_schemes/+:
+    luxury_dark:
+      name: "Luxury Dark"
+      author: "Custom"
+      color_format: rgba
+
+      # 整体窗口
+      back_color: 0x1B1D24F4
+      border_color: 0x7E869A50
+      shadow_color: 0x00000090
+
+      # 编码区
+      text_color: 0xF1F3F8FF
+      hilited_text_color: 0xFFFFFFFF
+      hilited_back_color: 0x2A2E38D0
+      hilited_shadow_color: 0x00000020
+
+      # 普通候选
+      candidate_text_color: 0xE6E9F2FF
+      candidate_back_color: 0x00000000
+      candidate_border_color: 0x00000000
+      candidate_shadow_color: 0x00000000
+
+      # 编号
+      label_color: 0x8A90A3FF
+
+      # 注释/辅助码
+      comment_text_color: 0x8A90A3FF
+
+      # 高亮候选
+      hilited_candidate_text_color: 0xFFFFFFFF
+      hilited_candidate_back_color: 0x353B48FF
+      hilited_candidate_border_color: 0x8A93A840
+      hilited_candidate_shadow_color: 0x00000000
+
+      hilited_label_color: 0xFFFFFFFF
+      hilited_comment_text_color: 0xC9D0DFFF
+
+      hilited_mark_color: 0xBFC8DF70
+
+      nextpage_color: 0x8A90A3FF
+      prevpage_color: 0x8A90A3FF
+    luxury_dark_purple:
+      name: "Luxury Dark Purple"
+      author: "Custom"
+
+      # 后面的颜色全部按 RRGGBBAA
+      color_format: rgba
+
+      back_color: 0x1A1C22F4
+      border_color: 0x7A809540
+      shadow_color: 0x00000090
+
+      text_color: 0xEEF1F8FF
+      hilited_text_color: 0xFFFFFFFF
+      hilited_back_color: 0x262A34D0
+      hilited_shadow_color: 0x00000020
+
+      candidate_text_color: 0xE6E9F2FF
+      candidate_back_color: 0x00000000
+      candidate_border_color: 0x00000000
+      candidate_shadow_color: 0x00000000
+
+      label_color: 0x8D92A6FF
+      comment_text_color: 0x8D92A6FF
+
+      hilited_candidate_text_color: 0xFFFFFFFF
+      hilited_candidate_back_color: 0x5B61F6EE
+      hilited_candidate_border_color: 0x9FA7FFFF
+      hilited_candidate_shadow_color: 0x00000000
+
+      hilited_label_color: 0xFFFFFFFF
+      hilited_comment_text_color: 0xE2E6FFFF
+      hilited_mark_color: 0xD5DAFFFF
+
+      nextpage_color: 0x8D92A6FF
+      prevpage_color: 0x8D92A6FF

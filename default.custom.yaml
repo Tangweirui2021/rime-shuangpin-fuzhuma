@@ -7,6 +7,8 @@ customization:
 patch:
   "key_binder/bindings/+":
     - { when: always, accept: Control+period, toggle: ascii_punct }
+    - { when: paging,  accept: bracketleft,  send: Page_Up }
+    - { when: has_menu, accept: bracketright, send: Page_Down }
   schema_list:
     - {schema: moqi_wan_zrm}
   menu:

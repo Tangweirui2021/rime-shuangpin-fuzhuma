@@ -7,6 +7,7 @@ switches_engine:
     - name: traditionalization
       states: [ 简, 繁 ]
     - name: emoji
+      reset: 1
       states: [ 💀, 😄 ]
     - name: chaifen
       states: [ 不拆, 扌斥 ]
@@ -66,8 +67,10 @@ switches_engine:
       - table_translator@custom_phrase_super_3jian_no_conflict
       - table_translator@custom_phrase_super_4jian_no_conflict
       - table_translator@emojis ## 添加注释后：停用ae模式emoji输入
-      - table_translator@easy_en_simp ## 添加注释后：停用单词输入
-      - table_translator@jp_sela ## 添加注释后：停用日语输入
+      - table_translator@easy_en_simp ## 添加注释后：停用单词输入 (aw前缀输入英文)
+      # - table_translator@easy_en_mix ## 无前缀输入英文支持(大词库占用大)
+      - table_translator@melt_eng_mix ## 无前缀输入英文支持(与大词库二选一)
+      # - table_translator@jp_sela ## 添加注释后：停用日语输入
       # 反查翻译器
       - reverse_lookup_translator
       - table_translator@reverse_moqima
@@ -359,6 +362,35 @@ guide:
     # suffix: "'"
     tips: "英文单词（可去元音）"
     spelling_hints: 9
+    comment_format:
+      - xform/^.+$//
+
+  easy_en_mix:
+    dictionary: easy_en
+    # 输入部分英文也进行补全
+    enable_completion: true
+    # 不用英文词库自动组句
+    enable_sentence: false
+    # 不建立英文用户词典
+    enable_user_dict: false
+    # 中文主翻译器当前是 10000
+    # 英文略低，避免英文抢占中文首选
+    initial_quality: 9900
+    spelling_hints: 0
+    comment_format:
+      - xform/^.+$//
+
+  melt_eng_mix:
+    dictionary: melt_eng
+    # 必须开启，否则 perf 无法联想到 performance
+    enable_completion: true
+    # 英文不参与自动组句
+    enable_sentence: false
+    # 不建立英文用户词典
+    enable_user_dict: false
+    # 略低于墨奇中文主翻译器
+    initial_quality: 9990
+    spelling_hints: 0
     comment_format:
       - xform/^.+$//
       
